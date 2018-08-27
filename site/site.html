@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app" ng-controller="ApplicationCtrl as applicationCtrl" ng-strict-di="" class="" data-scrapbook-source="/24vulkan" data-scrapbook-create="20180301063632834">
+   <head ng-controller="metaCtrl">
+      <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+      <meta name="fragment" content="!">
+      <title>Казино Игровой клуб Вулкан 24 онлайн</title>
+	  <meta name="description" content="Получайте бесплатно фриспины на Вулкан 24 при регистрации. Бездепозитный бонус Vulkan 24 уже ждет вас. Так же имеется еженедельный кешбек.">
+      <meta name="keywords" content=" Вулкан 24, играть Вулкан 24, казино Вулкан 24">
+      <!---->
+	  <meta name='wmail-verification' content='6611035102d199feb60abff617a39f5b' />
+	  <meta name="yandex-verification" content="5dd4cc6f28af5775" />
+      <meta charset="UTF-8">
+      <title ng-bind="data.title || applicationCtrl.title">Казино Игровой клуб Вулкан 24 онлайн</title>
+      <script type="text/javascript" async=""></script><script type="text/javascript" async=""></script>
+	  <script type="text/javascript"></script><script type="text/javascript"></script>
+      <script></script>
+      <script></script>
+      <link rel="icon" href="favicon.png" type="image/x-icon">
+      <!---->
+      <link rel="stylesheet" ng-if="!deploy" href="style-b8076c810a.css">
+      <!---->
+      <link rel="canonical" href="/24vulkan">
+      <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+      <script type="text/javascript" async=""></script>
+   </head>
+   
+   
+   <body ng-class="{
+      'slot-bg': $root.currentState === 'gameReal',
+      'success-in': $root.currentState === 'paymentSuccess',
+      'success-out':$root.currentState === 'withdraw_success'
+      }">
+	  <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter47877272 = new Ya.Metrika({
+                    id:47877272,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/47877272" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	  
+      <!-- Promo game -->
+      <!---->
+      <div ui-view="promo" style="width: 100%; height: 100%;" ng-show="promo" class="ng-hide"></div>
+      <!-- Transaction_success -->
+      <!---->
+      <div ui-view="success"></div>
+      <!---->
+      <div ui-view="" class="global-wrapper" ng-hide="promo || success" style="">
+         <div class="plugin-box" plugin="">
+            <div class="plugin-install-box">
+               <div class="plugin-install-wrap_">
+                  <div class="plugin-description" ng-bind-html="plugin.value">Установите плагин "Open Gateway" для безопасной и комфортной игры в нашем клубе!</div>
+                  <div class="plugin-controlls"> <a class="btn blue" href="/24vulkan" ui-sref="default.pages({slug: 'plugin'})">Подробнее</a> <a class="btn red" target="_blank" href="">Установить</a> </div>
+                  <div class="plugin-close"> <span class="close-link" ng-click="vm.closePlugin()"></span> </div>
+               </div>
+            </div>
+         </div>
+         <div growl="">
+            <div class="growl-container jGrowl">
+               <!----> 
+            </div>
+         </div>
+         <div id="wrapper">
+            <header class="header">
+               <div class="header-top">
+                  <header-menu class="main-menu">
+                     <div class="left-part">
+                        <!----><!---->
+                        <a ng-repeat="item in $ctrl.headerMenuItems" ng-if="$index < 4" class="main-menu-a" ng-href="/games" href="/24vulkan" style="">
+                           <!----><i ng-if="item.icon" class="ico menu-playhall" ng-class="item.icon"></i><!----> <span>Игровой зал</span> <!----> 
+                        </a>
+                        <!----><!----><!---->
+                        <a ng-repeat="item in $ctrl.headerMenuItems" ng-if="$index < 4" class="main-menu-a" ng-href="/lottery" href="/24vulkan">
+                           <!----><i ng-if="item.icon" class="ico menu-lottery" ng-class="item.icon"></i><!----> <span>Лотерея</span> <!----> 
+                        </a>
+                        <!----><!----><!---->
+                        <a ng-repeat="item in $ctrl.headerMenuItems" ng-if="$index < 4" class="main-menu-a" ng-href="/tournaments" href="/24vulkan">
+                           <!----><i ng-if="item.icon" class="ico menu-tournament" ng-class="item.icon"></i><!----> <span>Турниры</span> <!----> 
+                        </a>
+                        <!----><!----><!---->
+                        <a ng-repeat="item in $ctrl.headerMenuItems" ng-if="$index < 4" class="main-menu-a" ng-href="/points" href="/24vulkan">
+                           <!----><i ng-if="item.icon" class="ico menu-points" ng-class="item.icon"></i><!----> <span>Баллы</span> <!----> 
+                        </a>
+                        <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----> 
+                     </div>
+                     <div class="right-part">
+                        <!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                        <a ng-repeat="item in $ctrl.headerMenuItems" ng-if="$index > 3" class="main-menu-a" ng-href="/hall-of-fame" href="/24vulkan" style="">
+                           <!----><i ng-if="item.icon" class="ico menu-rating" ng-class="item.icon"></i><!----> <span>Рейтинги</span> <!----> 
+                        </a>
+                        <!----><!----><!---->
+                        <a ng-repeat="item in $ctrl.headerMenuItems" ng-if="$index > 3" class="main-menu-a" ng-href="/actions" href="/24vulkan">
+                           <!----><i ng-if="item.icon" class="ico menu-promo" ng-class="item.icon"></i><!----> <span>Акции</span> <!----> 
+                        </a>
+                        <!----><!----><!---->
+                        <a ng-repeat="item in $ctrl.headerMenuItems" ng-if="$index > 3" class="main-menu-a" ng-href="/gifts" href="/24vulkan">
+                           <!----><i ng-if="item.icon" class="ico menu-gift" ng-class="item.icon"></i><!----> <span>Подарки</span> <!---->
+                           <gifts-notification ng-if="item.url === 'gifts'">
+                              <!---->
+                           </gifts-notification>
+                           <!----> 
+                        </a>
+                        <!----><!----><!---->
+                        <a ng-repeat="item in $ctrl.headerMenuItems" ng-if="$index > 3" class="main-menu-a" ng-href="/levels" href="/24vulkan">
+                           <!----><i ng-if="item.icon" class="ico menu-levels" ng-class="item.icon"></i><!----> <span>Уровни</span> <!----> 
+                        </a>
+                        <!----><!----> 
+                     </div>
+                     <br class="clear-fix"> <!-- Icons => admin->menus->menu->icon name menu-playhall menu-lottery menu-tournament menu-points menu-rating menu-promo menu-gift menu-levels -->
+                  </header-menu>
+                  <div class="user-panel clr">
+                     <div class="user-panel-mirror fleft"> <a class="btn big blue" ui-sref="default.games.gamesRoom" href="/24vulkan"> Игровой зал </a> </div>
+                     <!----> <a class="header-logo" href="/24vulkan" ui-sref="default.homepage"></a> <!---->
+                     <div class="user-panel-register fright" ng-if="!isLogged"> <a class="btn big red" href="/24vulkan" ui-sref="default.register" modal="auth" active-tab="register"> Зарегистрироваться </a> </div>
+                     <!----> 
+                  </div>
+               </div>
+               <div class="sidebars" sticky-scroll="" offset="6" style="transform: translateY(25.6px);">
+                  <aside class="sidebar">
+                     <balance-widget>
+                        <!---->
+                        <div class="user-balance border-blue box-neon bg-transp" ng-if="!$root.isLogged">
+                           <div class="user-balance-h txt-neon">Ваш уровень</div>
+                           <span class="user-balance-lvl" href="">Гость</span> 
+                           <div class="user-balance-imgCell"> <a href="/24vulkan"> <img width="144" height="110" src="guest-level.png" alt=""> </a> </div>
+                           <div class="user-balance-stars"> <span style="width:0"></span> </div>
+                           <div class="user-balance-rating"> <span class="user-balance-rating-bar" style="width: 0;"> </span> <span class="user-balance-rating-points">0/100</span> </div>
+                           <div class="user-balance-values"> <a href="/24vulkan" rel="nofollow" ui-sref="default.cash.deposit" modal="auth" active-tab="register" class="user-balance-balance">Баланс:</a> <span class="user-balance-balance-value">0 RUB</span> <a href="/24vulkan" rel="nofollow" ui-sref="default.points-exchange" modal="auth" active-tab="register" class="user-balance-points">Баллы:</a> <span class="user-balance-points-value">0</span> </div>
+                        </div>
+                        <!----> <!-- Logged --> <!---->
+                     </balance-widget>
+                     <div banners="1">
+                        <!---->
+                     </div>
+                  </aside>
+                  <aside class="sidebar right">
+                     <tournament-widget data="{&quot;id&quot;:1079,&quot;type&quot;:1,&quot;startDate&quot;:&quot;2018-02-23T21:00:00+0000&quot;,&quot;endDate&quot;:&quot;2018-03-04T20:59:00+0000&quot;,&quot;active&quot;:true,&quot;currency&quot;:&quot;RUB&quot;,&quot;title&quot;:&quot;Турнир «Космический флот»&quot;,&quot;group&quot;:&quot;Пятница&quot;,&quot;shortDescription&quot;:&quot;&quot;,&quot;images&quot;:{&quot;image&quot;:null,&quot;image2&quot;:null,&quot;headerImage&quot;:null,&quot;counterImage&quot;:null,&quot;prizesImage&quot;:null},&quot;fund&quot;:0,&quot;rewardType&quot;:0}" user-id="">
+                        <!---->
+                        <div class="tournament border-blue box-neon" ng-if="!$ctrl.hideWidget()">
+                           <div class="txt-neon tournament-widget-title"> Турнир <span>Турнир «Космический флот»</span> </div>
+                           <div class="rating">
+                              <div class="sidebar-counter" counter="$ctrl.tournament.endDate" counter-title="До конца" counter-type="tillEnd">
+                                 <div class="timer">
+                                    <b>До конца</b> <span class="counter counter-analog" data-direction="down" data-format="99 23:59:59"><span class="part part0"><span class="digit digit0">0</span><span class="digit digit3">3</span></span><span class="separator separator1"> </span><span class="part part2"><span class="digit digit1">1</span><span class="digit digit5">5</span></span><span class="separator separator3">:</span><span class="part part4"><span class="digit digit2 digit22">2</span><span class="digit digit2 digit32">2</span></span><span class="separator separator5">:</span><span class="part part6">
+									<span class="digit digit5 digit55">5</span><span class="digit digit8 digit98">8</span></span></span> 
+                                    <div class="marking-time clr">
+                                       <div>Дней</div>
+                                       <div class="marking-time-separator"></div>
+                                       <div>Часов</div>
+                                       <div class="marking-time-separator"></div>
+                                       <div>Минут</div>
+                                       <div class="marking-time-separator"></div>
+                                       <div>Секунд</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <table class="tournament-widget">
+                                 <tbody>
+                                    <tr class="tabel">
+                                       <td class="widget-cell">№</td>
+                                       <td class="widget-cell">Логин</td>
+                                       <td class="widget-cell">Очки</td>
+                                    </tr>
+                                    <!----><!---->
+                                    <tr ng-repeat="member in $ctrl.members | limitTo: 7" ng-if="member.score > 0" class="" style="">
+                                       <td class="widget-cell">1</td>
+                                       <td class="widget-cell">sed**</td>
+                                       <td class="widget-cell">63,578.51</td>
+                                    </tr>
+                                    <!----><!----><!---->
+                                    <tr ng-repeat="member in $ctrl.members | limitTo: 7" ng-if="member.score > 0" class="">
+                                       <td class="widget-cell">2</td>
+                                       <td class="widget-cell">@RSM**</td>
+                                       <td class="widget-cell">40,202.08</td>
+                                    </tr>
+                                    <!----><!----><!---->
+                                    <tr ng-repeat="member in $ctrl.members | limitTo: 7" ng-if="member.score > 0" class="">
+                                       <td class="widget-cell">3</td>
+                                       <td class="widget-cell">@TJ-**</td>
+                                       <td class="widget-cell">22,714.12</td>
+                                    </tr>
+                                    <!----><!----><!---->
+                                    <tr ng-repeat="member in $ctrl.members | limitTo: 7" ng-if="member.score > 0" class="">
+                                       <td class="widget-cell">4</td>
+                                       <td class="widget-cell">zima**</td>
+                                       <td class="widget-cell">14,530.91</td>
+                                    </tr>
+                                    <!----><!----><!---->
+                                    <tr ng-repeat="member in $ctrl.members | limitTo: 7" ng-if="member.score > 0" class="">
+                                       <td class="widget-cell">5</td>
+                                       <td class="widget-cell">iln**</td>
+                                       <td class="widget-cell">12,430.19</td>
+                                    </tr>
+                                    <!----><!----><!---->
+                                    <tr ng-repeat="member in $ctrl.members | limitTo: 7" ng-if="member.score > 0" class="">
+                                       <td class="widget-cell">6</td>
+                                       <td class="widget-cell">mila**</td>
+                                       <td class="widget-cell">11,668.54</td>
+                                    </tr>
+                                    <!----><!----><!---->
+                                    <tr ng-repeat="member in $ctrl.members | limitTo: 7" ng-if="member.score > 0" class="">
+                                       <td class="widget-cell">7</td>
+                                       <td class="widget-cell">Tata**</td>
+                                       <td class="widget-cell">9,049.95</td>
+                                    </tr>
+                                    <!----><!----> <!----> 
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div class="center-b">
+                              <!----><a ng-if="!$ctrl.showAllGamesButton() &amp;&amp; $ctrl.joinShowBtn" class="btn blue ng-animate-disabled" ui-sref="default.tournaments.tournament({args: $ctrl.tournament.id})" href="/24vulkan">Участвовать</a><!----> <!----> 
+                           </div>
+                        </div>
+                        <!---->
+                     </tournament-widget>
+                     <div banners="2">
+                        <!---->
+                     </div>
+                  </aside>
+               </div>
+               <div class="middle-wrapper">
+                  <div class="header-base">
+                     <!----> <!---->
+                     <div class="header-content box-neon bg-transp" ng-if="!isLogged">
+                        <div class="w100" winners-list="">
+                           <section class="winners">
+                              <div class="winners-h txt-neon"><i class="ico cup"></i>Победители</div>
+                              <hr class="neon-line">
+                              <ul class="winners-list" style="height: 150px; overflow: hidden;">
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: -48.097px; opacity: 0.0380602;"> <span class="winners-name">@MIQ**</span> <span class="winners-amount">780 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">Vlad**</span> <span class="winners-amount">18,000 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">user**</span> <span class="winners-amount">7,500 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">@gmu**</span> <span class="winners-amount">4,860 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">Tata**</span> <span class="winners-amount">3,780 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">@hPF**</span> <span class="winners-amount">3,730 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">@QUY**</span> <span class="winners-amount">2,706 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">mast**</span> <span class="winners-amount">2,410 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">bari**</span> <span class="winners-amount">2,000 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">We**</span> <span class="winners-amount">2,000 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">@6en**</span> <span class="winners-amount">1,953 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">@4s6**</span> <span class="winners-amount">1,540 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">mari**</span> <span class="winners-amount">1,520 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">8902**</span> <span class="winners-amount">1,500 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">@nh1**</span> <span class="winners-amount">1,500 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">@RHC**</span> <span class="winners-amount">1,175 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">@Aa_**</span> <span class="winners-amount">1,026 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">Vikt**</span> <span class="winners-amount">900 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">lyda**</span> <span class="winners-amount">900 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">oleg**</span> <span class="winners-amount">875 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">ARME**</span> <span class="winners-amount">800 RUB</span> </li>
+                                 <li class="winners-i clr" ng-repeat="user in ::vm.users" style="margin-top: 0px; opacity: 1;"> <span class="winners-name">AZAT**</span> <span class="winners-amount">800 RUB</span> </li>
+                                 <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----> 
+                              </ul>
+                           </section>
+                        </div>
+                     </div>
+                     <!----> <!---->
+                     <div class="header-content right box-neon bg-transp" ng-if="!isLogged">
+                        <div class="login" ng-controller="LoginCtrl as vm">
+                           <span class="login-header">Войти с помощью:</span> 
+                           <div class="social-block" ulogin-widget="widget">
+                              <ul class="widget-social-auth" id="uLoginButtonswidget" data-ulogin="optional=email;display=buttons;callback=uloginAuthCb" data-ulogin-inited="1519885867816">
+                                 <li class="widget-social-btn"> <button class="btn vk__btn" type="button" data-uloginbutton="vkontakte" title="Vkontakte"> <i class="icon icon-vk-new"></i> </button> </li>
+                                 <li class="widget-social-btn"> <button class="btn mail-ru__btn" type="button" data-uloginbutton="mailru" title="Mailru"> <i class="icon icon-mailru"></i> </button> </li>
+                                 <li class="widget-social-btn"> <button class="btn od__btn" type="button" data-uloginbutton="odnoklassniki" title="Odnoklassniki"> <i class="icon icon-odnoklasniki"></i> </button> </li>
+                                 <li class="widget-social-btn"> <button class="btn ya__btn" type="button" data-uloginbutton="yandex" title="Yandex"> <i class="icon icon-ya"></i> </button> </li>
+                                 <li class="widget-social-btn"> <button class="btn ya__btn" type="button" data-uloginbutton="google" title="Google"> <i class="icon icon-google"></i> </button> </li>
+                                 <li class="widget-social-btn"> <button class="btn blue" type="button" data-uloginbutton="facebook" title="Facebook"> <i class="icon icon-fb"></i> </button> </li>
+                                 <li class="widget-social-btn"> <button class="btn vk__btn" type="button" data-uloginbutton="twitter" title="Twitter"> <i class="icon icon-twitter"></i> </button> </li>
+                                 <li class="widget-social-btn"> <button class="btn ya__btn" type="button" data-uloginbutton="googleplus" title="Google+"> <i class="icon icon-g-plus"></i> </button> </li>
+                                 <li class="widget-social-btn"> <button class="btn ya__btn" type="button" data-uloginbutton="youtube" title="Youtube"> <i class="icon icon-youtube"></i> </button> </li>
+                              </ul>
+                           </div>
+                           <form name="vm.loginForm" ng-submit="vm.login()" novalidate="" class="ng-pristine ng-invalid ng-invalid-required">
+                              <label class="login-user field-w" for="login" ng-class="{'error': vm.loginForm.email.$invalid &amp;&amp; (vm.loginForm.email.$touched || vm.loginForm.$submitted)}">
+                                 <div class="field-ico"> <i class="ico user"></i> </div>
+                                 <input type="text" name="email" placeholder="Логин / e-mail" id="login" ng-model="vm.user.email" ng-required="true" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" required="required" value=""> 
+                                 <div ng-messages="vm.loginForm.email.$error" class="ng-active">
+                                    <!----><b class="validation-msg" ng-message="required">Поле не может быть пустым</b> <!----> 
+                                 </div>
+                                 <!----> 
+                              </label>
+                              <label class="login-password field-w" for="password" ng-class="{'error': vm.loginForm.password.$invalid &amp;&amp; (vm.loginForm.password.$touched || vm.loginForm.$submitted)}">
+                                 <div class="field-ico"> <i class="ico password"></i> </div>
+                                 <input type="password" name="password" placeholder="Пароль" id="password" ng-required="true" ng-model="vm.user.password" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" required="required"> 
+                                 <div ng-messages="vm.loginForm.password.$error" class="ng-active">
+                                    <!----><b class="validation-msg" ng-message="required">Введите пароль</b> <!----> 
+                                 </div>
+                              </label>
+                              <div class="login-base clr">
+                                 <div class="login-sign-in"> <input type="submit" class="btn blue" value="ВОЙТИ"> </div>
+                                 <div class="login-recover"> <span class="login-recover-txt">Забыли пароль?</span> <a class="login-recover-a" href="/24vulkan" ui-sref="default.resetPassword">Восстановить</a> </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <!----> <!----> 
+                  </div>
+               </div>
+            </header>
+            <main class="main">
+               <div class="middle-wrapper" ng-controller="PageTitleCtrl as titleCtrl">
+                  <!---->
+                  <games-filter ng-if="titleCtrl.isFilterState">
+                     <hr class="gradient-line">
+                     <div class="games-filter">
+                        <nav class="games-filter__type">
+                           <a class="games-filter__type-item" ui-sref="default.games.gamesRoom" ui-sref-active="active" href="/24vulkan">Все игры</a> <!----><a ng-repeat="type in $ctrl.gameTypes" class="games-filter__type-item" ui-sref-active="active" ui-sref="default.games.category({category: type.name})" href="/24vulkan" style=""> Слоты </a><!----><a ng-repeat="type in $ctrl.gameTypes" class="games-filter__type-item" ui-sref-active="active" ui-sref="default.games.category({category: type.name})" href="/24vulkan" style=""> Рулетки </a><!----><a ng-repeat="type in $ctrl.gameTypes" class="games-filter__type-item" ui-sref-active="active" ui-sref="default.games.category({category: type.name})" href="/24vulkan" style=""> Карточные </a><!----> <a class="games-filter__type-item" ui-sref="default.games.favourites" ui-sref-active="active" href="/24vulkan">Любимые игры</a> 
+                        </nav>
+                        <div class="games-filter__search"> <input type="text" id="gameSearch" placeholder="Поиск" ng-model="$ctrl.gameName" ng-model-options="{debounce: 250}" ng-change="$ctrl.search($ctrl.gameName)" class="ng-pristine ng-untouched ng-valid ng-empty" style="" value=""> <label for="gameSearch"> <i class="icon icon-search"></i> </label> </div>
+                        <div class="games-filter__developer">
+                           <div class="games-filter__developer-wrap">
+                              <span class="games-filter__developer-title">Производители</span> 
+                              <ul class="games-filter__developer-content">
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class="" style=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">igrosoft</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">novomatic</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">playtech</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">belatra</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">casino technology</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">duomatic</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">playson</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">williams interactive</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">other</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">atronic</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">netent</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">quickspin</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">booongo</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">jolly roger</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">aristocrat</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">sogaproducts</a> </li>
+                                 <!---->
+                                 <li ng-repeat="developer in $ctrl.developers" ui-sref-active="active" class=""> <a class="games-filter__developer-item" ui-sref="default.games.developers({developer: developer.canonical})" href="/24vulkan">yggdrasil</a> </li>
+                                 <!----> 
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </games-filter>
+                  <!----> <!----> <!---->
+                  <div ng-if="(titleCtrl.hiddenTitle &amp;&amp; !$root.searchGames) &amp;&amp; $root.currentState !== 'default.games.gamesRoom' &amp;&amp; $root.currentState !== 'default.pages'">
+                     <div ng-controller="metaCtrl">
+                        <hr class="gradient-line">
+                        <!----> <!---->
+                        <div ng-if="$root.currentState === 'default.homepage'" class="main-header" id="pagetitle">ДОБРО ПОЖАЛОВАТЬ В КАЗИНО ВУЛКАН 24</div>
+                        <!----> <!----> 
+                        <hr class="gradient-line">
+                     </div>
+                  </div>
+                  <!----> 
+               </div>
+               <!---->
+               <div ui-view="" class="middle-wrapper">
+                  <!---->
+                  <div ng-if="!$root.searchGames" main-slider="" ng-controller="SliderCtrl as vm" ng-show="vm.sliderItems.length" class="" style="">
+                     <div class="slider" ng-mouseenter="pause()" ng-mouseleave="play()">
+                        <ul class="slider-list slider-nav slider-nav1">
+                           <!---->
+                           <li class="slider-i ng-hide" ng-repeat="slide in ::vm.sliderItems | orderBy: 'slide.weight'" ng-show="isCurrentSlide($index)" style=""> <a ng-href="/game-modes" href="/24vulkan"> <img ng-src="/uploads/slides/d515f50928d2ba6cacce15edc967e948a713b985.jpeg" alt="" src="d515f50928d2ba6cacce15edc967e948a713b985.jpeg"> </a> </li>
+                           <!---->
+                           <li class="slider-i ng-hide" ng-repeat="slide in ::vm.sliderItems | orderBy: 'slide.weight'" ng-show="isCurrentSlide($index)" style=""> <a ng-href="/tournaments/1079" href="/24vulkan"> <img ng-src="/uploads/slides/b8c2fa5bda918a408e10b5d33082be83aa037670.jpeg" alt="" src="b8c2fa5bda918a408e10b5d33082be83aa037670.jpeg"> </a> </li>
+                           <!---->
+                           <li class="slider-i" ng-repeat="slide in ::vm.sliderItems | orderBy: 'slide.weight'" ng-show="isCurrentSlide($index)" style=""> <a ng-href="/welcome-pack" href="/24vulkan"> <img ng-src="/uploads/slides/908a6690469166bfb7b040f08b2ea7a83a5a778a.jpeg" alt="" src="908a6690469166bfb7b040f08b2ea7a83a5a778a.jpeg"> </a> </li>
+                           <!---->
+                           <li class="slider-i ng-hide" ng-repeat="slide in ::vm.sliderItems | orderBy: 'slide.weight'" ng-show="isCurrentSlide($index)" style=""> <a ng-href="/cash" href="/24vulkan"> <img ng-src="/uploads/slides/4c13f84770445e8ab58e5c020afbdf09b463ad32.jpeg" alt="" src="4c13f84770445e8ab58e5c020afbdf09b463ad32.jpeg"> </a> </li>
+                           <!---->
+                           <li class="slider-i ng-hide" ng-repeat="slide in ::vm.sliderItems | orderBy: 'slide.weight'" ng-show="isCurrentSlide($index)" style=""> <a ng-href="/big-bonus" href="/24vulkan"> <img ng-src="/uploads/slides/4a9d05bb3227102d68cf3b45b231cb2fe6b80f7f.jpeg" alt="" src="4a9d05bb3227102d68cf3b45b231cb2fe6b80f7f.jpeg"> </a> </li>
+                           <!----> 
+                        </ul>
+                        <a ng-click="sliderPrev()" href="" class="slider-arrow prev"></a> <a ng-click="sliderNext()" href="" class="slider-arrow next"></a> 
+                        <ul class="slider-nav-tabs">
+                           <!---->
+                           <li ng-repeat="slide in ::vm.sliderItems" class="" style=""> <a ng-class="{'active': currentSlideIndex === $index}" ng-click="sliderMoveTo($index)" href="" class="" style=""></a> </li>
+                           <!---->
+                           <li ng-repeat="slide in ::vm.sliderItems" class=""> <a ng-class="{'active': currentSlideIndex === $index}" ng-click="sliderMoveTo($index)" href="" class="" style=""></a> </li>
+                           <!---->
+                           <li ng-repeat="slide in ::vm.sliderItems" class=""> <a ng-class="{'active': currentSlideIndex === $index}" ng-click="sliderMoveTo($index)" href="" class="active" style=""></a> </li>
+                           <!---->
+                           <li ng-repeat="slide in ::vm.sliderItems" class=""> <a ng-class="{'active': currentSlideIndex === $index}" ng-click="sliderMoveTo($index)" href="" class="" style=""></a> </li>
+                           <!---->
+                           <li ng-repeat="slide in ::vm.sliderItems" class=""> <a ng-class="{'active': currentSlideIndex === $index}" ng-click="sliderMoveTo($index)" href="" class="" style=""></a> </li>
+                           <!----> 
+                        </ul>
+                     </div>
+                  </div>
+                  <!----> 
+                  <section class="games" ng-controller="GamesCtrl as vm">
+                     <!-- Most popular --> <!---->
+                     <div ng-if="vm.hiddenFilterGames &amp;&amp; !vm.filterName">
+                        <hr class="gradient-line">
+                        <div class="main-header">Самые популярные</div>
+                        <hr class="gradient-line mb15">
+                        <div vulkan-popular-games="" limit="12" games-count-alias="homepage_popular_games_count">
+                           <ul class="games-list clr">
+                              <!----> <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/gameGroups/icon/76/76edb1e93605b39eaad30b201b0f8efdfecc80f6.png" alt="Sharky" src="76edb1e93605b39eaad30b201b0f8efdfecc80f6.png"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 154,664.73 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 90 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Sharky</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!---->
+                                    <div ng-if="game.groupType === 'group'"> <a ui-sref="gameGroup({slug: game.slug})" class="games-a-overlay" title="Sharky" href="/24vulkan"></a> </div>
+                                    <!----> <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/gameGroups/icon/21/215c0989afcea907639ae3e62eb652a59600f12a.jpeg" alt="Great Blue" src="215c0989afcea907639ae3e62eb652a59600f12a.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 37,325.91 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 46 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Great Blue</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!---->
+                                    <div ng-if="game.groupType === 'group'"> <a ui-sref="gameGroup({slug: game.slug})" class="games-a-overlay" title="Great Blue" href="/24vulkan"></a> </div>
+                                    <!----> <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/gameGroups/icon/f9/f958a33109719159d4ab4f8fcb8d323cb9d75c62.jpeg" alt="Gonzo's Quest" src="f958a33109719159d4ab4f8fcb8d323cb9d75c62.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 14,482.40 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 39 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Gonzo's Quest</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!---->
+                                    <div ng-if="game.groupType === 'group'"> <a ui-sref="gameGroup({slug: game.slug})" class="games-a-overlay" title="Gonzo's Quest" href="/24vulkan"></a> </div>
+                                    <!----> <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/gameGroups/icon/79/794aa09ef3b7835a33c22dde8ecf95ff59136649.jpeg" alt="Crazy Monkey" src="794aa09ef3b7835a33c22dde8ecf95ff59136649.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 184,256.13 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 155 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Crazy Monkey</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!---->
+                                    <div ng-if="game.groupType === 'group'"> <a ui-sref="gameGroup({slug: game.slug})" class="games-a-overlay" title="Crazy Monkey" href="/24vulkan"></a> </div>
+                                    <!----> <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/games/icon/de/dedcbb9996e255f4a1e579a2fdf715e0a23f4439.jpeg" alt="Garage" src="dedcbb9996e255f4a1e579a2fdf715e0a23f4439.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 35,788.95 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 44 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Garage</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!----> <!---->
+                                    <div ng-if="game.groupType === 'game'">
+                                       <!----><a ng-if="::!$root.isLogged" ui-sref="default.games.gameDemo({externalName: game.slug})" class="games-a-overlay" title="Garage" href="/24vulkan"></a><!----> <!----> 
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/games/icon/f9/f988f7b2d59b8531e3fdf11bbef1896a1e01a98f.jpeg" alt="Dolphin's Pearl" src="f988f7b2d59b8531e3fdf11bbef1896a1e01a98f.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 72,275.24 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 91 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Dolphin's Pearl</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!----> <!---->
+                                    <div ng-if="game.groupType === 'game'">
+                                       <!----><a ng-if="::!$root.isLogged" ui-sref="default.games.gameDemo({externalName: game.slug})" class="games-a-overlay" title="Dolphin's Pearl" href="/24vulkan"></a><!----> <!----> 
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/games/icon/de/de6a2af3612cd237f6ce858feebba35cab64d505.jpeg" alt="Book of Ra" src="de6a2af3612cd237f6ce858feebba35cab64d505.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 528,345.10 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 200 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Book of Ra</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!----> <!---->
+                                    <div ng-if="game.groupType === 'game'">
+                                       <!----><a ng-if="::!$root.isLogged" ui-sref="default.games.gameDemo({externalName: game.slug})" class="games-a-overlay" title="Book of Ra" href="/24vulkan"></a><!----> <!----> 
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/games/icon/ac/ac02921a58f83972bfecd53f575ab10c6161bf53.jpeg" alt="The Money Game" src="ac02921a58f83972bfecd53f575ab10c6161bf53.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 43,300.62 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 69 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">The Money Game</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!----> <!---->
+                                    <div ng-if="game.groupType === 'game'">
+                                       <!----><a ng-if="::!$root.isLogged" ui-sref="default.games.gameDemo({externalName: game.slug})" class="games-a-overlay" title="The Money Game" href="/24vulkan"></a><!----> <!----> 
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/games/icon/b9/b9d39a2400523c6cab39a163abf7a2b3e27cc96e.jpeg" alt="Unicorn Magic" src="b9d39a2400523c6cab39a163abf7a2b3e27cc96e.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 12,474.69 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 18 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Unicorn Magic</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!----> <!---->
+                                    <div ng-if="game.groupType === 'game'">
+                                       <!----><a ng-if="::!$root.isLogged" ui-sref="default.games.gameDemo({externalName: game.slug})" class="games-a-overlay" title="Unicorn Magic" href="/24vulkan"></a><!----> <!----> 
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/games/icon/d2/d2502a54c59d1de4919336884fc316e90b13e26f.jpeg" alt="Mermaid's Pearl" src="d2502a54c59d1de4919336884fc316e90b13e26f.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 12,960.83 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 20 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Mermaid's Pearl</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!----> <!---->
+                                    <div ng-if="game.groupType === 'game'">
+                                       <!----><a ng-if="::!$root.isLogged" ui-sref="default.games.gameDemo({externalName: game.slug})" class="games-a-overlay" title="Mermaid's Pearl" href="/24vulkan"></a><!----> <!----> 
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/games/icon/7f/7f2b3bbcccefe613f4d37f17b32fd1f9dfabd37f.jpeg" alt="Royal Treasures" src="7f2b3bbcccefe613f4d37f17b32fd1f9dfabd37f.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 20,811.93 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 33 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Royal Treasures</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!----> <!---->
+                                    <div ng-if="game.groupType === 'game'">
+                                       <!----><a ng-if="::!$root.isLogged" ui-sref="default.games.gameDemo({externalName: game.slug})" class="games-a-overlay" title="Royal Treasures" href="/24vulkan"></a><!----> <!----> 
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!---->
+                              <li class="games-i" ng-repeat="game in popularGames.list | limitTo : limit" list-game-widget="::game">
+                                 <div class="games-image">
+                                    <img ng-src="/uploads/games/icon/44/44414c393ba0511bff4b0498a1b923033d65d778.jpeg" alt="Lucky Lady's Charm" src="44414c393ba0511bff4b0498a1b923033d65d778.jpeg"> <!---->
+                                    <div class="games-image-overlay" ng-if="game.betStatistic !== 0" style="">
+                                       <p class="games-text"> <span>Ставок за сутки:</span> 162,297.89 RUB </p>
+                                       <p class="games-text"> <span>Игроков:</span> 93 </p>
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <span class="games-title">Lucky Lady's Charm</span> <!----> <!---->
+                                 <div ng-if="$root.isGameGroup" class="" style="">
+                                    <!----> <!---->
+                                    <div ng-if="game.groupType === 'game'">
+                                       <!----><a ng-if="::!$root.isLogged" ui-sref="default.games.gameDemo({externalName: game.slug})" class="games-a-overlay" title="Lucky Lady's Charm" href="/24vulkan"></a><!----> <!----> 
+                                    </div>
+                                    <!----> 
+                                 </div>
+                                 <!---->
+                              </li>
+                              <!----> 
+                           </ul>
+                        </div>
+                     </div>
+                     <!----> <!----> <!-- Popular --> <!----> 
+                  </section>
+                  <hr class="gradient-line">
+                  <div class="main-all-games center-b ng-scope"> <a class="btn blue" ui-sref="default.games.gamesRoom" href="/24vulkan"> Все игры </a> </div>
+                  <hr class="gradient-line">
+                  <div promotion="">
+                     <div class="promotion clr">
+                        <div class="promotion-i border-blue"> <a href="/24vulkan" ui-sref="default.games.gamesRoom"> <img src="promotion.jpg" alt=""> <span class="promotion-button"> <span class="btn blue"> Играть сейчас </span> </span> </a> </div>
+                        <div class="promotion-i border-red"> <a href="/24vulkan" ui-sref="default.games.gamesRoom"> <img src="promotion2.jpg" alt=""> <span class="promotion-button"> <span class="btn red"> Играть сейчас </span> </span> </a> </div>
+                     </div>
+                  </div>
+                  <page slug="seo-main">
+                     <!---->
+                     <div ng-controller="metaCtrl" ng-if="ctrl.slug !== 'feedback_text'">
+                        <hr class="gradient-line">
+                        <h1 class="main-header">КАЗИНО ВУЛКАН 24: ОФИЦИАЛЬНЫЙ ИГРОВОЙ ОНЛАЙН КЛУБ</h1>
+                        <hr class="gradient-line">
+                     </div>
+                     <!----> 
+                     <div class="text-content clr" ng-bind-html="ctrl.page.content">
+                        
+						
+						
+				<h1>Вулкан 24 игры без риска для личных денег</h1>
+
+<p><br />
+Игры с азартным уклоном &ndash; почему они нравятся людям? Этот вопрос будет не понятен для тех, кто уже играет и с неподдельным удовольствием посещает игорные заведения виртуального мира. Многие ошибочно полагают, что Вулкан 24 &ndash; опасное и рискованное увлечение, ведь можно расстаться не просто с крупной суммой, но потерять все нажитое. Однако это мнение &ndash; удел скептиков. Оставив их при своем мнении, можно сказать только, что те, кто рискнул сыграть в Вулкан 24 ни на минуту не пожалел об этом и есть почему.<br />
+Какой игорный клуб выбрать для отдыха?<br />
+Люди, уставшие от рутины и повседневных забот, пытаются уйти от проблем и хоть на какое-то время отвлечься и забыться. Игорные клубы &ndash; это отличный способ релакса, и если сюда пришел человек с умом, то он может еще и выиграть. Бездумное просаживание денег, дымящие сигарами завсегдатаи реальных клубов давно в прошлом. Прекрасной альтернативой играм в наземном Вулкан 24 стали интернет-клубы.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2>В чем преимущества игровых виртуальных заведений и Вулкан 24?</h2>
+
+<p><br />
+1. Двери электронного лицензионного игорного заведения открыты 24 часа в сутки, и любой желающий может &laquo;отвести душу&raquo; и сорвать джек-пот.&nbsp;<br />
+2. В виртуальном клубе не нужно терять время на простаивание в очереди за фишками.<br />
+3. Можно не задумываться, как вывести деньги в <strong>Вулкан 24</strong>. Выводить деньги клуб предлагает удобными для игроков способами, через любые платежные системы, будь то Вебмани, Яндекс.Деньги или банковские карты.<br />
+4. В онлайн-Вулкан 24 рады всем гостям и нет на входе &laquo;фейс-контроля&raquo;.<br />
+5. При возникновении вопросов по ходу игры можно обратиться в круглосуточную службу поддержки.<br />
+6. Яркий интерфейс полюбился игрокам, он удобен и понятен для новичков, только пришедших в клуб, и для завсегдатаев заведения.<br />
+7. Администрация сайта полностью берет на себя всю ответственность за сохранение данных игроков, ей можно доверить любое действие.<br />
+8. Ресурс выбирает в партнеры только лучшие слоты и занимается тщательной их проверкой, прежде чем впустить на свое поле.<br />
+9. Разнообразный каталог игр по-настоящему радует азартную душу клиента: здесь и классика жанра &laquo;Три топора&raquo;, и рулетка, и видеопокер. Руководство заведения не стоит на месте, постоянно обновляя игровой ассортимент, обновляя интерфейс и краски.<br />
+10.&nbsp; Главный плюс Вулкан 24 &ndash; бесплатный бонус и возможность сыграть, не рискуя ни копейкой из реального кошелька.<br />
+Играй, не рискуя!</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h3>Почему стоит играть в клубе Vulkan 24 и ничего не опасаться?</h3>
+
+<p><br />
+Вопросы безопасности<br />
+Реально ли сыграть в <strong>Вулкан 24</strong>, не потратив ни рубля реальных финансовых средств? Вполне! Это не все. Вулкан 24 приглашает опробовать себя в качестве игрока, присмотреться к разным играм и испробовать определенную тактику без регистрации! Люди частенько опасаются за распространение своих данных, оно и понятно, столько вокруг мошенников. Однако сайт полностью защищен, оберегая данные игроков в своих надежных электронных &laquo;сундучках&raquo;. Клуб заслужил репутацию элитарного Вулкан 24 благодаря надежности сохранения информации, здесь гарантирована честность со стороны заведения во всем. Сайт применяет специальные методики защиты Firewalls, защита от сбоев в сети. Клуб использует протокол защиты SSl, популярный в банковской системе. Не стоит бояться за то, как вывести деньги в Вулкан 24 &ndash; здесь нет бюрократических проволочек.&nbsp;<br />
+Не стать игроманом &ndash; реально?<br />
+Игорная зависимость &ndash; страх, который сковывает кликнуть некоторых людей по иконке игорного заведения в поисковике. Но в клубе игроки защищены от пагубного влияния игры. После изучения исследований Союза здравоохранения Кэмбриджа, в сайт внедрены специальные программы, мешающие человеку стать зависимым от азарта. Политика клуба выстроена в согласованности с вопросами взаимоотношений социума и государственной экономики.&nbsp;<br />
+Игры без денег<br />
+Игра без регистрации позволит провести время за ярко оформленными в современном компьютерном дизайне, качественной графике автоматами, не требуя никаких денежных вложений. Игровые залы не ограничат человека временными рамками и представят множество бесплатных слотов. При этом сохраняется приятная атмосфера <strong>Вулкан 24</strong>, с четкими кнопками и практически реальными карточными играми.&nbsp;<br />
+О бонусной политике лучше сказать отдельно<br />
+1. Новички имеют возможность получить первый бонус Вулкан 24 уже с первых секунд посещения заведения. В каком размере? Это целых 3000 рублей!&nbsp;<br />
+2. День рождения &ndash; веселый праздник и для игрока в онлайн-Вулкан 24. Конечно, придется доказать факт дня рождения, поэтому пригодится скан паспортных данных. Но зато есть шанс получить приятный бонус Вулкан 24 от администрации при общей сумме всех взносов &ndash; 5 тыс.р.<br />
+3. Четверг &ndash; время собирать кэшбэки. Возвращается игроку 10% от количества денег, вложенных в игры.&nbsp;<br />
+4. Пополнил баланс на 1 тыс. р.? Получи раздел Prime! Это дорога к бонусам!<br />
+А если не хочется получать бонусы, что тогда? Игроку дано право выбора, в любое время их можно лишиться в добровольном порядке, известив об этом руководство клуба.<br />
+Сложно ли выводить выигрыш?<br />
+Обычно с этим проблем не возникает при условии прохождения игроками верификации. Аккаунт должен быть подтвержден и деньги могут быть выведены лишь на счет, с которого пополнялся депозит в Вулкан 24. Без минимального внесения денег на депозит, вывод средств невозможен.<br />
+Можно ли играть в дороге?<br />
+Поездка на заднем сиденье автомобиля или в поезде не станет скучной с виртуальным Вулкан 24. Теперь легко и просто можно установить приложение на смартфон и наслаждаться стильными и красочными играми в дороге.&nbsp;<br />
+Топ самых популярных игр<br />
+Игра на деньги или игорную валюту &ndash; способ получить сильные эмоции, &laquo;встряхнуться&raquo; от суеты и просто расслабиться за увлекательными автоматами.<br />
+1. Покорила сердце не одного посетителя &laquo;Книга Ра Де Люкс&raquo;, ее можно скачать на телефон или играть бесплатно на сайте. Игра приглашает в увлекательное путешествие, полное приключений и загадок.<br />
+2. &laquo;Фруктовая сенсация&raquo; пришлась гостям с первых минут появления.<br />
+3. Автомат Sharky и Резидент стали любимчиками игрового поля для многих любителей азарта.<br />
+Как обратиться в службу технической поддержки?<br />
+Игорное заведение Вулкан 24 &ndash; это постоянная забота о комфорте посетителей. Новичок не растеряется, и завсегдатай сможет обратиться за помощью по выводу средств и возникшему вопросу 3 способами:<br />
+* всегда примет звонок горячая линия;<br />
+* в онлайн-чате рады прийти на помощь;<br />
+* можно заполнить форму ответа для связи по электронной почте.<br />
+Руководство сайта в любое время в праве &laquo;заморозить&raquo; игровой депозит в случае подозрительной деятельности гостя. Лишь в этом случае игровое предприятие не станет нести ответственность за возврат вложенных денег. Администрация оставляет за собой право извещать соответствующие органы в целях безопасности, поскольку заведение заслужило многолетним опытом и честностью репутацию элитного клуба и дорожит ею.&nbsp;<br />
+Приветственный бонус, честная политика клуба, красочные картинки игровых автоматов и множество приятных сюрпризов и акций ожидают в электронной версии лучшего игорного заведения. Оставьте ваши денежки, если боитесь их потерять и наслаждайтесь играми абсолютно бесплатно. Отдыхаете вы, а за комфортное пребывание и безопасность возьмет на себя ответственность клуб Вулкан 24.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+		
+						
+						
+						
+						</div>
+                  </page>
+               </div>
+            </main>
+            <footer class="footer">
+               <div class="middle-wrapper">
+                  <div>
+                     <hr class="gradient-line">
+                     <div class="footer-info"></div>
+                     <div class="footer-payments"> <i class="icon icon-payment-visa"></i> <i class="icon icon-payment-mastercard"></i> <i class="icon icon-payment-qiwi"></i> <i class="icon icon-payment-alfabank"></i> <i class="icon icon-payment-sberbank"></i> <i class="icon icon-payment-yandex"></i> </div>
+                     <div class="footer-secure"> <i class="icon icon-secure-4"></i> <i class="icon icon-secure-2"></i> <i class="icon icon-secure-6"></i> <i class="icon icon-secure-5"></i> <i class="icon icon-secure-3"></i> </div>
+                     <socials>
+                        <div class="footer-socials">
+                           <hr class="gradient-line">
+                           <div class="footer-socials-text">Следите за Вулканом 24 в социальных сетях</div>
+                           <div class="footer-socials-icons">
+                              <!----><a ng-repeat="social in $ctrl.socials" ng-href="/24vulkan" rel="”nofollow”" target="_blank" href="/24vulkan" class="" style=""> <i ng-class="social.alias" class="icon soc_url_vk"></i> </a>
+							  <!----><a ng-repeat="social in $ctrl.socials" ng-href="/24vulkan" rel="”nofollow”" target="_blank" href="/24vulkan" class=""> <i ng-class="social.alias" class="icon soc_url_fb"></i> </a><!---->
+							  <a ng-repeat="social in $ctrl.socials" ng-href="/24vulkan" rel="”nofollow”" target="_blank" href="/24vulkan" class=""> <i ng-class="social.alias" class="icon soc_url_twitter"></i> </a><!---->
+							  <a ng-repeat="social in $ctrl.socials" ng-href="/24vulkan" rel="”nofollow”" target="_blank" href="/24vulkan" class=""> <i ng-class="social.alias" class="icon soc_url_gplus"></i> </a><!---->
+							  <a ng-repeat="social in $ctrl.socials" ng-href="/24vulkan" rel="”nofollow”" target="_blank" href="/24vulkan" class=""> <i ng-class="social.alias" class="icon soc_url_ok"></i> </a>
+							  <!----><a ng-repeat="social in $ctrl.socials" ng-href="/24vulkan" rel="”nofollow”" target="_blank" href="/24vulkan" class=""> <i ng-class="social.alias" class="icon soc_url_instagram"></i> </a>
+							  <!----> 
+                           </div>
+                           <hr class="gradient-line">
+                        </div>
+                     </socials>
+                     <nav class="footer-menu" footer-menu="">
+                        <ul>
+                           <!---->
+                           <li ng-repeat="item in footerMenuItems" class="" style=""> <a class="footer-menu-a" href="/24vulkan">О клубе</a> </li>
+                           <!---->
+                           <li ng-repeat="item in footerMenuItems" class=""> <a class="footer-menu-a" href="/24vulkan">FAQ</a> </li>
+                           <!---->
+                           <li ng-repeat="item in footerMenuItems" class=""> <a class="footer-menu-a" href="/24vulkan">Правила</a> </li>
+                           <!---->
+                           <li ng-repeat="item in footerMenuItems" class=""> <a class="footer-menu-a" href="/24vulkan">Обратная связь</a> </li>
+                           <!----> 
+                        </ul>
+                     </nav>
+                     <p class="footer-copy grey" ng-bind-html="applicationCtrl.copyright_text">Казино «24 Вулкан» © 2018. Клуб-казино «24 Вулкан» – игровые автоматы онлайн.</p>
+                  </div>
+               </div>
+            </footer>
+         </div>
+         <div class="siteheart" siteheart="">
+            <div class="sh-btn"> <span class="sh-btn-title">Техподдержка</span> </div>
+         </div>
+         <!-- START ExoClick Goal Tag | main --> <img width="1" height="1" ng-src="//main.exoclick.com/tag.php?goal=2722110d9807b6afa8072e8d22ffaf56" src="tag.php"> <!-- END ExoClick Goal Tag | main -->
+      </div>
+      <!---->
+      <!--app-->
+      <script async=""></script>
+      <div class="particleJs" id="particleJs" particles="">
+         <canvas class="particles-js-canvas-el" width="1878" height="940" style="width: 100%; height: 100%;"></canvas>
+         
+      </div>
+      <script type="text/javascript"></script>
+      <div id="ulogin_receiver_container" style="margin: 0px; padding: 0px; outline: none; border: none; border-radius: 0px; cursor: default; float: none; position: relative; display: none; width: 0px; height: 0px; left: 0px; top: 0px; box-sizing: content-box;"></div>
+      <div id="sh_button" class="shc sh_btn sh_btn_bottom sh_btn_bottom_right">
+         <img rel="logo" style="margin: 6px;" class="shc sh_logo_btn sh_logo_img" src="logo.png">
+         <div class="shc sh_title_text" rel="title">Помощь онлайн</div>
+         <div class="shc sh_block_counter" title="Посетителей на сайте"><span rel="counter">0</span></div>
+      </div>
+      <iframe src="index_1.html" scrolling="no" frameborder="0" style="position:absolute;width:0;height:0;left:-14444;"></iframe>
+   </body>
+   <script></script><script></script><script></script><script></script>
+</html>
