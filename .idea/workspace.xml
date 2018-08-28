@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d8395e1-bf53-44fb-bb9f-6ebe15e435f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AdminBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/AdminBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AlertMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/AlertMessage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AlertMessageForAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/AlertMessageForAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SuperAdminBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/SuperAdminBase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/authComponent.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/authComponent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db_params.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_params.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/AutoParseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AutoParseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/GoogleParseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/GoogleParseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SiteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/YandexParseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/YandexParseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/simplehtmldom/simple_html_dom.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/simplehtmldom/simple_html_dom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/215c0989afcea907639ae3e62eb652a59600f12a.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/44414c393ba0511bff4b0498a1b923033d65d778.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/4a9d05bb3227102d68cf3b45b231cb2fe6b80f7f.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/4c13f84770445e8ab58e5c020afbdf09b463ad32.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/76edb1e93605b39eaad30b201b0f8efdfecc80f6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/794aa09ef3b7835a33c22dde8ecf95ff59136649.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/7f2b3bbcccefe613f4d37f17b32fd1f9dfabd37f.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/908a6690469166bfb7b040f08b2ea7a83a5a778a.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/ac02921a58f83972bfecd53f575ab10c6161bf53.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/b8c2fa5bda918a408e10b5d33082be83aa037670.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/b9d39a2400523c6cab39a163abf7a2b3e27cc96e.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/d2502a54c59d1de4919336884fc316e90b13e26f.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/d515f50928d2ba6cacce15edc967e948a713b985.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/de6a2af3612cd237f6ce858feebba35cab64d505.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/dedcbb9996e255f4a1e579a2fdf715e0a23f4439.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/f958a33109719159d4ab4f8fcb8d323cb9d75c62.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/f988f7b2d59b8531e3fdf11bbef1896a1e01a98f.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/guest-level.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/promotion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/promotion2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/site.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/style-b8076c810a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/bootstrap-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/bootstrap-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/bootstrap-theme.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/bootstrap-theme.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/bootstrap-theme.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/bootstrap-theme.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/bootstrap-theme.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/fm.revealator.jquery.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/fm.revealator.jquery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/fm.revealator.jquery.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/fm.revealator.jquery.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/slick-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/slick-theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/slick.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/slick.eot" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/slick.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/slick.svg" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/slick.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/slick.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/slick.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/fonts/slick.woff" beforeDir="false" afterPath="$PROJECT_DIR$/template/fonts/slick.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/images/404/404.png" beforeDir="false" afterPath="$PROJECT_DIR$/template/images/404/404.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/ToTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/ToTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/buttonActive.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/buttonActive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/fm.revealator.jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/fm.revealator.jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/fm.revealator.jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/fm.revealator.jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/formatServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/formatServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/highpassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/highpassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/jquery-2.2.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/jquery-2.2.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/jquery.maskedinput.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/jquery.maskedinput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/jquery.maskedinput.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/jquery.maskedinput.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/jquery.scrollUp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/jquery.scrollUp.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-ar-AR.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-ar-AR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-bg-BG.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-bg-BG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-ca-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-ca-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-cs-CZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-cs-CZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-da-DK.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-da-DK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-de-DE.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-de-DE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-es-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-es-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-es-EU.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-es-EU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-fa-IR.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-fa-IR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-fi-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-fi-FI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-fr-FR.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-fr-FR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-he-IL.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-he-IL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-hu-HU.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-hu-HU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-id-ID.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-id-ID.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-it-IT.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-it-IT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-ja-JP.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-ja-JP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-ko-KR.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-ko-KR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-lt-LT.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-lt-LT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-nb-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-nb-NO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-nl-NL.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-nl-NL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-pl-PL.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-pl-PL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-pt-BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-pt-PT.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-pt-PT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-ro-RO.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-ro-RO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-ru-RU.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-ru-RU.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-sk-SK.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-sk-SK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-sl-SI.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-sl-SI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-sr-RS-Latin.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-sr-RS-Latin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-sr-RS.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-sr-RS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-sv-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-sv-SE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-th-TH.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-th-TH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-tr-TR.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-tr-TR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-uk-UA.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-uk-UA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-vi-VN.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-vi-VN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/lang/summernote-zh-TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/lang/summernote-zh-TW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/loading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/npm.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/npm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/passfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/passfield.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/slick.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/slick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/slick.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/js/summernote.js" beforeDir="false" afterPath="$PROJECT_DIR$/template/js/summernote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/cabinet/copy.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/cabinet/copy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/cabinet/copy.psd" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/cabinet/copy.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/cabinet/copy_new.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/cabinet/copy_new.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/cabinet/lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/cabinet/lock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/f.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/f.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/ff.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/ff.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/i.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/i.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/ii.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/ii.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/t.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/t.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/tt.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/tt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/vk.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/vk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/vkvk.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/vkvk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/y.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/y.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/ico/yy.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/ico/yy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload/images/logo/system.png" beforeDir="false" afterPath="$PROJECT_DIR$/upload/images/logo/system.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/authorization/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/authorization/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/autoparse.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/autoparse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/change_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/change_password.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/contactform.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/contactform.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/edit_name_and_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/edit_name_and_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/googleparse.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/googleparse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/statisticGoogle.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/statisticGoogle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/statisticUniversal.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/statisticUniversal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/statisticYandex.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/statisticYandex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/universalparse.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/universalparse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/vkparse.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/vkparse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/vulnerability.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/vulnerability.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cabinet/yandexparse.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/cabinet/yandexparse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/center.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/center.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/links.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/links.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/scripts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/changepassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/changepassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/passwdrecovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/passwdrecovery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/question.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/question.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/registration.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1864969811">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="html" value="3" />
+          <entry key="php" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="3" />
+          <entry key="PHP" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="884" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="884" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/SiteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="64" column="59" lean-forward="true" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vlkslotclub.com/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/config/routes.php" />
+        <option value="$PROJECT_DIR$/controllers/SiteController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="293" />
+    <option name="y" value="53" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="parsesites" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parsesites" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parsesites" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parsesites" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parsesites" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parsesites" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="parsesites" type="b2602c69:ProjectViewProjectNode" />
+              <item name="parsesites" type="462c0819:PsiDirectoryNode" />
+              <item name="vlkslotclub.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d8395e1-bf53-44fb-bb9f-6ebe15e435f8" name="Default Changelist" comment="" />
+      <created>1535376032041</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535376032041</updated>
+      <workItem from="1535376033218" duration="561000" />
+      <workItem from="1535443266615" duration="11012000" />
+      <workItem from="1535469300213" duration="2363000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13936000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.255119" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vlkslotclub.com/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="64" column="59" lean-forward="true" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

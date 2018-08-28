@@ -2,7 +2,7 @@
 
 class SiteController
 {
-    public static function actionindex()
+    public static function actionIndex()
     {
       
         require_once(ROOT . '/views/site/index.php');  
@@ -11,41 +11,92 @@ class SiteController
 
     public static function actionStore()
     {
+
         if(isset($_POST['submit'])){
 
+            $rule = array('/', ':', 'https', 'http');
+
             $targetUrl = trim(strip_tags($_POST['site']));
+
+            foreach ($rule as $item) {
+
+                $targetUrl = str_replace($item, '', $targetUrl);
+
+            }
+
+
             require_once ROOT . '/lib/simplehtmldom/simple_html_dom.php';
 
             $content = SiteController::getContent($targetUrl);
+
             if($content)
             {
                 $html = str_get_html($content);
-                if(!file_exists( 'site' )){
-                     
-                    mkdir('site', 0777);
+
+                if(!file_exists( $targetUrl )){
+
+                    mkdir($targetUrl, 0777);
+
                 }
 
-                    file_put_contents("site/site.html", $content);
+                    file_put_contents("$targetUrl/index.html", $content);
 
                     if($html->innertext!='' and count($html->find("link")))
-                    {   
-                        
+                    {
+
                         foreach($html->find("link") as $a){
 
                             $href = $a->attr['href'];
+
                             $href = ltrim ($href, "/");
 
                             if(stristr($href, '.css') || stristr($href, '.js') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
-                                $content = SiteController::getContent($targetUrl . "/" . $href);
-                                file_put_contents("site/" . $href, $content);
 
-                                preg_match_all('#<a [^>]*href="(.*)"[^>]*>#Ui', $content, $matches);
-                                print_r($matches[1]);//в массиве $matches[1] будут все ссылки
+                                if(stristr($href, 'http://') || stristr($href, 'https://')){
 
+                                    $content = SiteController::getContent($href);
+
+                                }else{
+                                    $content = SiteController::getContent($targetUrl . "/" . $href);
+                                }
+
+                                file_put_contents($targetUrl . "/" . $href, $content);
+
+                                if(stristr($href, '.css')){
+
+                                    if(stristr($href, 'http://') || stristr($href, 'https://')){
+
+                                        $con = file_get_contents($href);
+                                    }else{
+                                        $con = file_get_contents($targetUrl . "/" . $href);
+                                    }
+
+                                    $urlCss = SiteController::getImageUrls($con);
+
+
+                                    foreach ($urlCss as $src) {
+
+                                        $content = SiteController::getContent($targetUrl . "/" . $src);
+                                        file_put_contents($targetUrl . "/" . $src, $content);
+
+                                        if(stristr($src, '.css')){
+
+                                            $cssFile = file_get_contents($targetUrl . "/" . $src);
+                                            $urlCssincss = SiteController::getImageUrls($cssFile);
+
+                                            foreach ($urlCssincss as $src) {
+                                                $content = SiteController::getContent($targetUrl . "/" . $src);
+                                                file_put_contents($targetUrl. "/" . $src, $content);
+                                            }
+                                        }
+                                    }
+                                }
                             }
 
                         }
                     }
+
+
 
                     if($html->innertext!='' and count($html->find("img")))
                     {   
@@ -57,39 +108,49 @@ class SiteController
 
                             if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
                                 $content = SiteController::getContent($targetUrl . "/" . $href);
-                                file_put_contents("site/" . $href, $content);
+                                file_put_contents($targetUrl . "/" . $href, $content);
                             }                                                     
                         }
                     }
                 
                 
             }
-
-            
-
-
         }
 
-        //header('Location', '/');
-        //
         require_once(ROOT . '/views/site/index.php');  
         return true;
     }
 
-    public function getContent($url)
+    public static function getImageUrls($input_string) {
+
+        $urlArray = array();
+        preg_match_all('/url\(([\s])?([\"|\'])?(.*?)([\"|\'])?([\s])?\)/i', $input_string, $matches, PREG_PATTERN_ORDER);
+        if ($matches) {
+            foreach ($matches[3] as $match) {
+                array_push($urlArray, $match);
+            }
+        }
+
+        return $urlArray;
+    }
+
+    public static function getContent($url)
     {
+
 			$user_agent = $_SERVER["HTTP_USER_AGENT"];
+
             // create curl resource
             $ch = curl_init();
-			
+
 			curl_setopt($ch, CURLOPT_HEADER, 1);
+
 			//curl_setopt($ch, CURLOPT_USERAGENT, $user_agent);
 			curl_setopt($ch, CURLOPT_COOKIESESSION, true);
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_TIMEOUT, 3);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //return the transfer as a string
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			
+
 
 			//curl_setopt($ch, CURLOPT_PROXY, $proxy);
 			//curl_setopt($ch, CURLOPT_COOKIEJAR, dirname (__FILE__)."/cookie.txt"); 
@@ -97,7 +158,7 @@ class SiteController
  
             $output = curl_exec($ch); // get content
             $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE); // Получаем HTTP-код
- 
+
             // close curl resource to free up system resources
             //curl_close($ch);
 			//echo $http_code . "<br>";
@@ -132,6 +193,7 @@ class SiteController
 				{
 					$postResult = iconv($encoding, "UTF-8", $postResult);
 				}
+
 				return $postResult;
 			}
  
