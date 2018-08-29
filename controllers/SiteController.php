@@ -14,8 +14,8 @@ class SiteController
 
         if(isset($_POST['submit'])){
                    
-            $targetUrl = trim(strip_tags($_POST['site']));        
-            $targetUrl = parse_url($targetUrl, PHP_URL_HOST);
+            $targetUrlPost = trim(strip_tags($_POST['site']));
+            $targetUrl = parse_url($targetUrlPost, PHP_URL_HOST);
             
             require_once ROOT . '/lib/simplehtmldom/simple_html_dom.php';
 
@@ -31,107 +31,264 @@ class SiteController
 
                 }
 
-                    file_put_contents("$targetUrl/index.html", $content);
-
-                    if($html->innertext!='' and count($html->find("link")))
-                    {
-
-                        foreach($html->find("link") as $a){
-
-                            $href = $a->attr['href'];
-                            $href = ltrim ($href, "/");               
-
-                            if(stristr($href, '.css') || stristr($href, '.js') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
-                                
-                                if(stristr($href, trim(strip_tags($_POST['site'])))){
-
-                                    $path = parse_url($href, PHP_URL_PATH);
-                                    $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
-                                    
-
-                                    if(!file_exists( $targetUrl . $pathToDir )){
-                                        mkdir($targetUrl . $pathToDir, 0777, true);
-                                    }
-                                   
-                                    $content = SiteController::getContent($href);
-                                    
-                                    file_put_contents($targetUrl . $path, $content);
-                                    exit;
-
-                                }else if(!stristr($href, 'http')){
-                                    
-                                    $path = parse_url($href, PHP_URL_PATH);
-                                    $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
-                                    
-                                    if(!empty($pathToDir)){
-                                         if(!file_exists( $targetUrl . $pathToDir )){
-                                             mkdir($targetUrl . $pathToDir, 0777, true);
-                                        }
-    
-                                        $content = SiteController::getContent($targetUrl . "/" . $href);
-                                        file_put_contents($targetUrl . $path, $content);
-
-                                    }else{
-                                        $content = SiteController::getContent($targetUrl . "/" . $path);
-                                        file_put_contents($targetUrl . '/' . $path, $content);
-                                    }
-                                    exit;
-
-                                }
-
-                                
-                                if(stristr($href, '.css')){
-
-                                    if(stristr($href, 'http://') || stristr($href, 'https://')){
-                                        $con = file_get_contents($href);
-                                    }else{
-
-                                        $con = file_get_contents($targetUrl . "/" . $href);
-                                    }
-
-                                    $urlCss = SiteController::getImageUrls($con);
+                file_put_contents("$targetUrl/index.html", $content);
 
 
-                                    foreach ($urlCss as $src) {
+//                if($html->innertext!='' and count($html->find("link")))
+//                {
+//
+//                    foreach($html->find("link") as $a){
+//
+//                        $href = $a->attr['href'];
+//                        $href = ltrim ($href, "/");
+//
+//                        if(stristr($href, '.css') || stristr($href, '.js') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
+//
+//                            if(stristr($href, trim(strip_tags($_POST['site'])))){
+//
+//                                $path = parse_url($href, PHP_URL_PATH);
+//                                $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+//
+//
+//                                if(!file_exists( $targetUrl . $pathToDir )){
+//                                    mkdir($targetUrl . $pathToDir, 0777, true);
+//                                }
+//
+//                                $content = SiteController::getContent($href);
+//
+//                                file_put_contents($targetUrl . $path, $content);
+//
+//
+//                                if(stristr($href, '.css')) {
+//
+//                                    $urlCss = SiteController::getImageUrls($content);
+//
+//                                    foreach ($urlCss as $src) {
+//
+//                                        $pathSrc = parse_url($src, PHP_URL_PATH);
+//                                        $pathToDirSrc = mb_substr(str_replace(basename($pathSrc), '', $pathSrc), 0, -1);
+//
+//
+//                                        if(substr($pathSrc, 0,1) == '.'){
+//                                            $fullPath = $targetUrl . $pathToDir . '/' .$pathToDirSrc;
+//                                        }else if (substr($pathSrc, 0,1) =='/'){
+//                                            $fullPath = $targetUrl . $pathToDir . $pathToDirSrc;
+//                                        }else{
+//                                            $fullPath = $targetUrl . $pathToDir . '/' .$pathToDirSrc;
+//                                        }
+//
+//
+//
+//                                        if(!file_exists( $fullPath)){
+//                                            mkdir($fullPath, 0777);
+//                                        }
+//
+//
+//                                        $content = SiteController::getContent($fullPath . '/' .  basename($pathSrc));
+//
+//                                        file_put_contents($fullPath . '/' .  basename($pathSrc), $content);
+//
+//
+//
+//                                        if(stristr($src, '.css')){
+//                                            echo $src;
+//                                            exit;
+//                                            $cssFile = file_get_contents($targetUrl . "/" . $src);
+//                                            $urlCssincss = SiteController::getImageUrls($cssFile);
+//
+//                                            foreach ($urlCssincss as $src) {
+//                                                $content = SiteController::getContent($targetUrl . "/" . $src);
+//                                                file_put_contents($targetUrl. "/" . $src, $content);
+//                                            }
+//                                        }
+//                                    }
+//
+//                                }
+//
+//
+//
+//
+//                            }else if(!stristr($href, 'http')){
+//
+//                                $path = parse_url($href, PHP_URL_PATH);
+//                                $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+//
+//
+//
+//                                if(substr($path, 0,1) == '.'){
+//                                    $fullPath = $targetUrl . "/" . $pathToDir;
+//                                }else if (substr($path, 0,1) =='/'){
+//                                    $fullPath = $targetUrl . $pathToDir;
+//                                }else{
+//                                    $fullPath = $targetUrl . "/" . $pathToDir;
+//                                }
+//
+//                                if(!empty($pathToDir)){
+//                                     if(!file_exists( $fullPath )){
+//                                         mkdir($fullPath, 0777, true);
+//                                    }
+//
+//                                    $content = SiteController::getContent($fullPath . "/" . basename($path));
+//                                    file_put_contents($fullPath . "/" . basename($path), $content);
+//
+//                                }else{
+//                                    $content = SiteController::getContent($targetUrl . "/" . $path);
+//                                    file_put_contents($targetUrl . '/' . $path, $content);
+//                                }
+//
+//                                if(stristr($href, '.css')) {
+//
+//                                    $urlCss = SiteController::getImageUrls($content);
+//
+//                                    foreach ($urlCss as $src) {
+//
+//                                        $pathSrc = parse_url($src, PHP_URL_PATH);
+//                                        $pathToDirSrc = mb_substr(str_replace(basename($pathSrc), '', $pathSrc), 0, -1);
+//
+//
+//                                        if(substr($pathSrc, 0,1) == '.'){
+//                                            $fullPath = $targetUrl . $pathToDir . '/' .$pathToDirSrc;
+//                                        }else if (substr($pathSrc, 0,1) =='/'){
+//                                            $fullPath = $targetUrl . $pathToDir . $pathToDirSrc;
+//                                        }else{
+//                                            $fullPath = $targetUrl . $pathToDir . '/' .$pathToDirSrc;
+//                                        }
+//
+//
+//
+//                                        if(!file_exists( $fullPath)){
+//                                            mkdir($fullPath, 0777);
+//                                        }
+//
+//
+//                                        $content = SiteController::getContent($fullPath . '/' .  basename($pathSrc));
+//
+//                                        file_put_contents($fullPath . '/' .  basename($pathSrc), $content);
+//
+//
+//
+//                                        if(stristr($src, '.css')){
+//
+//                                            $pathSrcCss = parse_url($src, PHP_URL_PATH);
+//                                            $pathToDirSrcCss = mb_substr(str_replace(basename($pathSrcCss), '', $pathSrcCss), 0, -1);
+//
+//
+//                                            if(substr($pathSrcCss, 0,1) == '.'){
+//                                                $fullPathCss = $targetUrl . $pathToDir . '/' .$pathToDirSrcCss;
+//                                            }else if (substr($pathSrcCss, 0,1) =='/'){
+//                                                $fullPathCss = $targetUrl . $pathToDir . $pathToDirSrcCss;
+//                                            }else{
+//                                                $fullPathCss = $targetUrl . $pathToDir . '/' .$pathToDirSrcCss;
+//                                            }
+//
+//                                            if(!file_exists( $fullPathCss)){
+//                                                mkdir($fullPathCss, 0777);
+//                                            }
+//
+//
+//                                            $urlCssincss = SiteController::getImageUrls($content);
+//
+//                                            foreach ($urlCssincss as $src) {
+//
+//                                                $pathSrcCssInCss = parse_url($src, PHP_URL_PATH);
+//                                                $pathToDirSrcCssInCss = mb_substr(str_replace(basename($pathSrcCssInCss), '', $pathSrcCssInCss), 0, -1);
+//
+//                                                if(substr($pathSrcCssInCss, 0,1) == '.'){
+//                                                    $fullPathCss = $targetUrl . $pathToDir . '/' .$pathToDirSrcCssInCss;
+//                                                }else if (substr($pathSrcCssInCss, 0,1) =='/'){
+//                                                    $fullPathCss = $targetUrl . $pathToDir . $pathToDirSrcCssInCss;
+//                                                }else{
+//                                                    $fullPathCss = $targetUrl . $pathToDir . '/' .$pathToDirSrcCssInCss;
+//                                                }
+//
+//
+//                                                $content = SiteController::getContent($fullPathCss . $src);
+//                                                file_put_contents($fullPathCss . $src, $content);
+//                                            }
+//                                        }
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
+//
+//
+//
+//                if($html->innertext!='' and count($html->find("img")))
+//                {
+//
+//                    foreach($html->find("img") as $a){
+//
+//                        $href = $a->attr['src'];
+//                        $href = ltrim ($href, "/");
+//
+//                        if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
+//
+//                            if(stristr($href, trim(strip_tags($_POST['site'])))) {
+//
+//
+//                                $path = parse_url($href, PHP_URL_PATH);
+//                                $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+//
+//
+//                                if (!file_exists($targetUrl . $pathToDir)) {
+//                                    mkdir($targetUrl . $pathToDir, 0777, true);
+//                                }
+//
+//                                $content = SiteController::getContent($href);
+//
+//                                file_put_contents($targetUrl . $path, $content);
+//
+//                            }else if(!stristr($href, 'http')) {
+//
+//                                $path = parse_url($href, PHP_URL_PATH);
+//                                $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+//
+//                                if(substr($path, 0,1) == '.'){
+//                                    $fullPath = $targetUrl . '/' . $pathToDir;
+//                                }else if (substr($path, 0,1) =='/'){
+//                                    $fullPath = $targetUrl . $pathToDir;
+//                                }else{
+//                                    $fullPath = $targetUrl . '/' . $pathToDir;
+//                                }
+//
+//
+//                                if (!empty($pathToDir)) {
+//                                    if (!file_exists($fullPath)) {
+//                                        mkdir($fullPath, 0777, true);
+//                                    }
+//
+//                                    $content = SiteController::getContent($fullPath . "/" . basename($path));
+//                                    file_put_contents($fullPath . "/" . basename($path), $content);
+//
+//                                } else {
+//
+//                                    $content = SiteController::getContent($targetUrl . "/" . $path);
+//                                    file_put_contents($targetUrl . '/' . $path, $content);
+//                                }
+//                            }
+//                        }
+//                    }
+//                }
 
-                                        $content = SiteController::getContent($targetUrl . "/" . $src);
-                                        file_put_contents($targetUrl . "/" . $src, $content);
 
-                                        if(stristr($src, '.css')){
 
-                                            $cssFile = file_get_contents($targetUrl . "/" . $src);
-                                            $urlCssincss = SiteController::getImageUrls($cssFile);
+                if($html->innertext!='' and count($html->find("script"))) {
 
-                                            foreach ($urlCssincss as $src) {
-                                                $content = SiteController::getContent($targetUrl . "/" . $src);
-                                                file_put_contents($targetUrl. "/" . $src, $content);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
+                    foreach ($html->find("script") as $a) {
 
-                        }
+                        echo $a->innertext;
+                        exit;
+
+                        $href = $a->attr['src'];
+                        $href = ltrim($href, "/");
+                        echo $href;
+                        exit;
                     }
-
-
-
-                    if($html->innertext!='' and count($html->find("img")))
-                    {   
-                        
-                        foreach($html->find("img") as $a){
-
-                            $href = $a->attr['src'];
-                            $href = ltrim ($href, "/");
-
-                            if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
-                                $content = SiteController::getContent($targetUrl . "/" . $href);
-                                file_put_contents($targetUrl . "/" . $href, $content);
-                            }                                                     
-                        }
-                    }
-                
-                
+                }
+                $html->clear(); // подчищаем за собой
+                unset($html);
             }
         }
 
