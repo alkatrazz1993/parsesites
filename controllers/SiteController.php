@@ -13,18 +13,10 @@ class SiteController
     {
 
         if(isset($_POST['submit'])){
-
-            $rule = array('/', ':', 'https', 'http');
-
-            $targetUrl = trim(strip_tags($_POST['site']));
-
-            foreach ($rule as $item) {
-
-                $targetUrl = str_replace($item, '', $targetUrl);
-
-            }
-
-
+                   
+            $targetUrl = trim(strip_tags($_POST['site']));        
+            $targetUrl = parse_url($targetUrl, PHP_URL_HOST);
+            
             require_once ROOT . '/lib/simplehtmldom/simple_html_dom.php';
 
             $content = SiteController::getContent($targetUrl);
@@ -47,27 +39,53 @@ class SiteController
                         foreach($html->find("link") as $a){
 
                             $href = $a->attr['href'];
-
-                            $href = ltrim ($href, "/");
+                            $href = ltrim ($href, "/");               
 
                             if(stristr($href, '.css') || stristr($href, '.js') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
+                                
+                                if(stristr($href, trim(strip_tags($_POST['site'])))){
 
-                                if(stristr($href, 'http://') || stristr($href, 'https://')){
+                                    $path = parse_url($href, PHP_URL_PATH);
+                                    $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+                                    
 
+                                    if(!file_exists( $targetUrl . $pathToDir )){
+                                        mkdir($targetUrl . $pathToDir, 0777, true);
+                                    }
+                                   
                                     $content = SiteController::getContent($href);
+                                    
+                                    file_put_contents($targetUrl . $path, $content);
+                                    exit;
 
-                                }else{
-                                    $content = SiteController::getContent($targetUrl . "/" . $href);
+                                }else if(!stristr($href, 'http')){
+                                    
+                                    $path = parse_url($href, PHP_URL_PATH);
+                                    $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+                                    
+                                    if(!empty($pathToDir)){
+                                         if(!file_exists( $targetUrl . $pathToDir )){
+                                             mkdir($targetUrl . $pathToDir, 0777, true);
+                                        }
+    
+                                        $content = SiteController::getContent($targetUrl . "/" . $href);
+                                        file_put_contents($targetUrl . $path, $content);
+
+                                    }else{
+                                        $content = SiteController::getContent($targetUrl . "/" . $path);
+                                        file_put_contents($targetUrl . '/' . $path, $content);
+                                    }
+                                    exit;
+
                                 }
 
-                                file_put_contents($targetUrl . "/" . $href, $content);
-
+                                
                                 if(stristr($href, '.css')){
 
                                     if(stristr($href, 'http://') || stristr($href, 'https://')){
-
                                         $con = file_get_contents($href);
                                     }else{
+
                                         $con = file_get_contents($targetUrl . "/" . $href);
                                     }
 
@@ -127,7 +145,9 @@ class SiteController
         preg_match_all('/url\(([\s])?([\"|\'])?(.*?)([\"|\'])?([\s])?\)/i', $input_string, $matches, PREG_PATTERN_ORDER);
         if ($matches) {
             foreach ($matches[3] as $match) {
-                array_push($urlArray, $match);
+                if(!stristr($match, 'urn')){
+                    array_push($urlArray, $match);
+                }
             }
         }
 
