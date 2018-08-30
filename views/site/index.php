@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <meta name="yandex-verification" content="0fa9490f64761138" />
         <title>Main | Landing</title>
         <?php include ROOT . '/views/layouts/scripts.php'; ?>
         <?php include ROOT . '/views/layouts/links.php'; ?>
