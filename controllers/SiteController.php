@@ -42,7 +42,7 @@ class SiteController
                         $href = $a->attr['href'];
                         $href = ltrim ($href, "/");
 
-                        if(stristr($href, '.css') || stristr($href, '.js') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg') || stristr($href, '.ttf') || stristr($href, '.otf') || stristr($href, '.woff')){
+                        if(stristr($href, '.css') || stristr($href, '.js') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg') || stristr($href, '.ttf') || stristr($href, '.otf') || stristr($href, '.woff') || stristr($href, '.ico')){
 
                             if(stristr($href, trim(strip_tags($_POST['site'])))){
 
@@ -67,20 +67,34 @@ class SiteController
 
                                         $pathSrc = parse_url($src, PHP_URL_PATH);
                                         $pathToDirSrc = mb_substr(str_replace(basename($pathSrc), '', $pathSrc), 0, -1);
+                                        //echo "<br>" . $pathSrc . "<br>";
 
+//                                        if(substr($pathSrc, 0,1) == '.'){
+//                                            $fullPath = $targetUrl . '/' . $pathToDirSrc;
+//                                        }else if (substr($pathSrc, 0,1) =='/'){
+//                                            $fullPath = $targetUrl . $pathToDirSrc;
+//                                        }else{
+//                                            $fullPath = $targetUrl . '/' . $pathToDirSrc;
+//                                        }
 
-                                        if(substr($pathSrc, 0,1) == '.'){
-                                            $fullPath = $targetUrl . '/' . $pathToDirSrc;
+                                        if(substr($pathSrc, 0,6) == '../../'){
+                                            $fullPath = $targetUrl . "/" . $pathToDir . "/" . $pathToDirSrc;
+                                            //echo "<br>" . "Полный путь для" . "../../ ------" . $fullPath . "<br>";
                                         }else if (substr($pathSrc, 0,1) =='/'){
                                             $fullPath = $targetUrl . $pathToDirSrc;
+                                            //echo "<br>" . "Полный путь для" . " / ------" . $fullPath . "<br>";
+                                        }else if (substr($pathSrc, 0,3) == '../'){
+                                            $fullPath = $targetUrl . "/" . $pathToDir . "/" . $pathToDirSrc;
+                                            //echo "<br>" . "Полный путь для" . "../ ------" . $fullPath . "<br>";
                                         }else{
-                                            $fullPath = $targetUrl . '/' . $pathToDirSrc;
+                                            $fullPath = $targetUrl . "/" . $pathToDirSrc;
+                                            //echo "<br>" . "Иначе" . " ------" . $fullPath . "<br>";
                                         }
 
 
 
                                         if(!file_exists( $fullPath)){
-                                            mkdir($fullPath, 0777);
+                                            mkdir($fullPath, 0777, true);
                                         }
 
 
@@ -111,16 +125,20 @@ class SiteController
 
                                 $path = parse_url($href, PHP_URL_PATH);
                                 $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
-
+                                //echo "<br>" . $path . "<br>";
 
 
                                 if(substr($path, 0,1) == '.'){
                                     $fullPath = $targetUrl . "/" . $pathToDir;
+                                    //echo "<br>" . "Полный путь для . -----" . $fullPath . "<br>";
                                 }else if (substr($path, 0,1) =='/'){
                                     $fullPath = $targetUrl . $pathToDir;
+                                    //echo "<br>" . "Полный путь для / -----" . $fullPath . "<br>";
                                 }else{
                                     $fullPath = $targetUrl . "/" . $pathToDir;
+                                    //echo "<br>" . "Иначе . -----" . $fullPath . "<br>";
                                 }
+
 
                                 if(!empty($pathToDir)){
                                      if(!file_exists( $fullPath )){
@@ -144,29 +162,39 @@ class SiteController
 
                                         $pathSrc = parse_url($src, PHP_URL_PATH);
                                         $pathToDirSrc = mb_substr(str_replace(basename($pathSrc), '', $pathSrc), 0, -1);
+                                        echo "<br>" . $pathSrc . "<br>";
 
 
-                                        if(substr($pathSrc, 0,1) == '.'){
-                                            $fullPath = $targetUrl . "/" . $pathToDirSrc;
+                                        if(substr($pathSrc, 0,6) == '../../'){
+                                            $fullPath = $targetUrl . "/" . $pathToDir . "/" . $pathToDirSrc;
+                                            echo "<br>" . "Полный путь для" . "../../ ------" . $fullPath . "<br>";
                                         }else if (substr($pathSrc, 0,1) =='/'){
                                             $fullPath = $targetUrl . $pathToDirSrc;
+                                            echo "<br>" . "Полный путь для" . " / ------" . $fullPath . "<br>";
+                                        }else if (substr($pathSrc, 0,3) == '../'){
+                                            $fullPath = $targetUrl . "/" . $pathToDir . "/" . $pathToDirSrc;
+                                            echo "<br>" . "Полный путь для" . "../ ------" . $fullPath . "<br>";
                                         }else{
                                             $fullPath = $targetUrl . "/" . $pathToDirSrc;
+                                            echo "<br>" . "Иначе" . " ------" . $fullPath . "<br>";
                                         }
+
+
 
 
                                         if(!file_exists( $fullPath)){
-                                            mkdir($fullPath, 0777);
+                                            mkdir($fullPath, 0777, true);
                                         }
 
-                                        if(stristr($pathSrc, 'bg_category_rastertop.gif')){
-                                            continue;
-                                        }else{
-                                            echo $href . "<br>";
-                                            echo dirname($pathSrc);
-                                            exit;
-
-                                        }
+//                                        if(stristr($pathSrc, 'bg_category_rastertop.gif')){
+//
+//                                            continue;
+//                                        }else{
+//                                            echo substr($pathSrc, 0,6) . "<br>";
+//                                            echo $fullPath;
+//                                            exit;
+//
+//                                        }
 
 
                                         $content = SiteController::getContent($fullPath . '/' .  basename($pathSrc));
@@ -190,7 +218,7 @@ class SiteController
                                             }
 
                                             if(!file_exists( $fullPathCss)){
-                                                mkdir($fullPathCss, 0777);
+                                                mkdir($fullPathCss, 0777, true);
                                             }
 
 
@@ -220,6 +248,7 @@ class SiteController
                             }
                         }
                     }
+
                 }
 
 
@@ -253,13 +282,74 @@ class SiteController
 
                                 $path = parse_url($href, PHP_URL_PATH);
                                 $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+                                //echo "<br>" . $path . "<br>";
 
                                 if(substr($path, 0,1) == '.'){
                                     $fullPath = $targetUrl . '/' . $pathToDir;
+                                    //echo "<br>" . "Полный путь для . -------- " . $fullPath . "<br>";
                                 }else if (substr($path, 0,1) =='/'){
                                     $fullPath = $targetUrl . $pathToDir;
+                                    //echo "<br>" . "Полный путь для / -------- " . $fullPath . "<br>";
                                 }else{
                                     $fullPath = $targetUrl . '/' . $pathToDir;
+                                    //echo "<br>" . "Иначе -------- " . $fullPath . "<br>";
+                                }
+
+
+                                if (!empty($pathToDir)) {
+                                    if (!file_exists($fullPath)) {
+                                        mkdir($fullPath, 0777, true);
+                                    }
+
+                                    $content = SiteController::getContent($fullPath . "/" . basename($path));
+                                    file_put_contents($fullPath . "/" . basename($path), $content);
+
+                                } else {
+
+                                    $content = SiteController::getContent($targetUrl . "/" . $path);
+                                    file_put_contents($targetUrl . '/' . $path, $content);
+                                }
+                            }
+                        }
+                    }
+
+                    foreach($html->find("img") as $a){
+
+                        $href = $a->attr['data-original'];
+                        $href = ltrim ($href, "/");
+
+                        if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
+
+                            if(stristr($href, trim(strip_tags($_POST['site'])))) {
+
+
+                                $path = parse_url($href, PHP_URL_PATH);
+                                $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+
+
+                                if (!file_exists($targetUrl . $pathToDir)) {
+                                    mkdir($targetUrl . $pathToDir, 0777, true);
+                                }
+
+                                $content = SiteController::getContent($href);
+
+                                file_put_contents($targetUrl . $path, $content);
+
+                            }else if(!stristr($href, 'http')) {
+
+                                $path = parse_url($href, PHP_URL_PATH);
+                                $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+                                //echo "<br>" . $path . "<br>";
+
+                                if(substr($path, 0,1) == '.'){
+                                    $fullPath = $targetUrl . '/' . $pathToDir;
+                                    //echo "<br>" . "Полный путь для . -------- " . $fullPath . "<br>";
+                                }else if (substr($path, 0,1) =='/'){
+                                    $fullPath = $targetUrl . $pathToDir;
+                                    //echo "<br>" . "Полный путь для / -------- " . $fullPath . "<br>";
+                                }else{
+                                    $fullPath = $targetUrl . '/' . $pathToDir;
+                                    //echo "<br>" . "Иначе -------- " . $fullPath . "<br>";
                                 }
 
 
@@ -280,6 +370,10 @@ class SiteController
                         }
                     }
                 }
+
+
+
+
 
 
 
