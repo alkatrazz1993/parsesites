@@ -221,6 +221,28 @@ class SiteController
                             SiteController::check($targetUrl, $href);
                         }
                     }
+
+                    foreach($html->find("img") as $a){
+
+                        $href = $a->attr['original-src'];
+                        $href = ltrim ($href, "/");
+
+                        if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
+
+                            SiteController::check($targetUrl, $href);
+                        }
+                    }
+
+                    foreach($html->find("img") as $a){
+
+                        $href = $a->attr['pc-adapt'];
+                        $href = ltrim ($href, "/");
+
+                        if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
+
+                            SiteController::check($targetUrl, $href);
+                        }
+                    }
                 }
 
                 if($html->innertext!='' and count($html->find("script"))) {
