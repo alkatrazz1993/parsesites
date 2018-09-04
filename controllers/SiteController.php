@@ -100,39 +100,39 @@ class SiteController
 
                                 $ifDomen = stristr($href, '/', true);
 
-                                if ((stristr($href, '.css') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')) && stristr($ifDomen, '.ru') || stristr($ifDomen, '.com')) {
+                                //if ((stristr($href, '.css') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')) && stristr($ifDomen, '.ru') || stristr($ifDomen, '.com')) {
 
-                                    $path = parse_url($href, PHP_URL_PATH);
-                                    $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+//                                    $path = parse_url($href, PHP_URL_PATH);
+//                                    $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
+//
+//                                    if (substr($path, 0, 1) == '.') {
+//                                        $fullPath = $targetUrl . '/' . $pathToDir;
+//                                        //echo "<br>" . "Полный путь для . -------- " . $fullPath . "<br>";
+//                                    } else if (substr($path, 0, 1) == '/') {
+//                                        $fullPath = $targetUrl . $pathToDir;
+//                                        //echo "<br>" . "Полный путь для / -------- " . $fullPath . "<br>";
+//                                    } else {
+//                                        $fullPath = $pathToDir;
+//                                        //echo "<br>" . "Иначе -------- " . $fullPath . "<br>";
+//                                    }
+//
+//                                    if (!empty($pathToDir)) {
+//
+//                                        if (!file_exists($fullPath)) {
+//                                            mkdir($fullPath, 0777, true);
+//                                        }
+//
+//                                        $content = SiteController::getContent($fullPath . "/" . basename($path));
+//                                        file_put_contents($targetUrl . "/" . $fullPath . "/" . basename($path), $content);
+//
+//                                    } else {
+//
+//                                        $content = SiteController::getContent($targetUrl . "/" . $path);
+//                                        file_put_contents($targetUrl . '/' . $path, $content);
+//                                    }
 
-                                    if (substr($path, 0, 1) == '.') {
-                                        $fullPath = $targetUrl . '/' . $pathToDir;
-                                        //echo "<br>" . "Полный путь для . -------- " . $fullPath . "<br>";
-                                    } else if (substr($path, 0, 1) == '/') {
-                                        $fullPath = $targetUrl . $pathToDir;
-                                        //echo "<br>" . "Полный путь для / -------- " . $fullPath . "<br>";
-                                    } else {
-                                        $fullPath = $pathToDir;
-                                        //echo "<br>" . "Иначе -------- " . $fullPath . "<br>";
-                                    }
 
-                                    if (!empty($pathToDir)) {
-
-                                        if (!file_exists($fullPath)) {
-                                            mkdir($fullPath, 0777, true);
-                                        }
-
-                                        $content = SiteController::getContent($fullPath . "/" . basename($path));
-                                        file_put_contents($targetUrl . "/" . $fullPath . "/" . basename($path), $content);
-
-                                    } else {
-
-                                        $content = SiteController::getContent($targetUrl . "/" . $path);
-                                        file_put_contents($targetUrl . '/' . $path, $content);
-                                    }
-
-
-                                }else {
+                                //}else {
 
 
                                     $path = parse_url($href, PHP_URL_PATH);
@@ -164,7 +164,7 @@ class SiteController
                                         $content = SiteController::getContent($targetUrl . "/" . $path);
                                         file_put_contents($targetUrl . '/' . $path, $content);
                                     }
-                                }
+                                //}
 
                                 if (stristr($href, '.css')) {
 
@@ -354,7 +354,7 @@ class SiteController
             $ifDomen = stristr($href, '/', true);
 
 
-            if((stristr($href, '.js') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')) && stristr($ifDomen, '.ru') || stristr($ifDomen, '.com')){
+            if(stristr($href, '.js') || stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
 
                 $path = parse_url($href, PHP_URL_PATH);
                 $pathToDir = mb_substr(str_replace(basename($path), '', $path), 0, -1);
@@ -497,8 +497,82 @@ class SiteController
 
 				return $postResult;
 			}
- 
     }
+
+//    public static function parseHtml($targetUrl){
+//
+//        require_once ROOT . '/lib/simplehtmldom/simple_html_dom.php';
+//
+//        $content = file_get_contents("$targetUrl/index.html");
+//
+//        $html = str_get_html($content);
+//
+//        if($html->innertext!='' and count($html->find("link"))) {
+//
+//            foreach ($html->find("link") as $a) {
+//                if(!empty($a->attr['href']) && !stristr($a->attr['href'], 'http')){
+//                    $href = $a->attr['href'];
+//                    $a->attr['href'] = ltrim($href, "/");
+//                    $html->save();
+//                }
+//            }
+//        }
+//        if($html->innertext!='' and count($html->find("img"))) {
+//
+//            foreach ($html->find("img") as $a) {
+//                if(!empty($a->attr['src']) && !stristr($a->attr['src'], 'http')) {
+//                    $href = $a->attr['src'];
+//                    //echo "До: " . $href . "<br>";
+//                    $a->attr['src'] = ltrim($href, "/");
+//                    // echo "После: " . $a->attr['src'] . "<br>";
+//                    $html->save();
+//                }
+//            }
+//
+//
+//            foreach ($html->find("img") as $a) {
+//                if(!empty($a->attr['data-original']) && !stristr($a->attr['data-original'], 'http')) {
+//                    $href = $a->attr['data-original'];
+//                    $a->attr['data-original'] = ltrim($href, "/");
+//                    $html->save();
+//                }
+//            }
+//
+//            foreach ($html->find("img") as $a) {
+//                if(!empty($a->attr['original-src']) && !stristr($a->attr['original-src'], 'http')) {
+//                    $href = $a->attr['original-src'];
+//                    $a->attr['original-src'] = ltrim($href, "/");
+//                    $html->save();
+//                }
+//            }
+//
+//            foreach ($html->find("img") as $a) {
+//                if(!empty($a->attr['pc-adapt']) && !stristr($a->attr['pc-adapt'], 'http')) {
+//                    $href = $a->attr['pc-adapt'];
+//                    $a->attr['pc-adapt'] = ltrim($href, "/");
+//                    $html->save();
+//                }
+//            }
+//        }
+//        if($html->innertext!='' and count($html->find("script"))) {
+//            foreach ($html->find("script") as $a) {
+//                if(!empty($a->attr['src']) && !stristr($a->attr['src'], 'http')){
+//                    $href = $a->attr['src'];
+//                    //echo "До: " . $href . "<br>";
+//                    $a->attr['src'] = ltrim($href, "/");
+//                    //echo "После: " . $a->attr['src'] . "<br>";
+//                    $html->save();
+//                }
+//
+//
+//            }
+//        }
+//
+//        file_put_contents("$targetUrl/index.html", $html);
+//
+//
+//    }
+
    
        
 }
