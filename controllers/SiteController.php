@@ -266,48 +266,19 @@ class SiteController
 
                 if($html->innertext!='' and count($html->find("img")))
                 {
+                    $toPath = array('src', 'data-original', 'original-src', 'pc-adapt');
 
-                    foreach($html->find("img") as $a){
+                    foreach ($toPath as $p){
 
-                        $href = $a->attr['src'];
-                        $href = ltrim ($href, "/");
+                        foreach($html->find("img") as $a){
 
-                        if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
+                            $href = $a->attr[$p];
+                            $href = ltrim ($href, "/");
 
-                            SiteController::check($targetUrl, $href);
-                        }
-                    }
+                            if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
 
-                    foreach($html->find("img") as $a){
-
-                        $href = $a->attr['data-original'];
-                        $href = ltrim ($href, "/");
-
-                        if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
-
-                            SiteController::check($targetUrl, $href);
-                        }
-                    }
-
-                    foreach($html->find("img") as $a){
-
-                        $href = $a->attr['original-src'];
-                        $href = ltrim ($href, "/");
-
-                        if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
-
-                            SiteController::check($targetUrl, $href);
-                        }
-                    }
-
-                    foreach($html->find("img") as $a){
-
-                        $href = $a->attr['pc-adapt'];
-                        $href = ltrim ($href, "/");
-
-                        if(stristr($href, '.png') || stristr($href, '.jpeg') || stristr($href, '.jpg') || stristr($href, '.gif') || stristr($href, '.svg')){
-
-                            SiteController::check($targetUrl, $href);
+                                SiteController::check($targetUrl, $href);
+                            }
                         }
                     }
 
@@ -538,6 +509,8 @@ class SiteController
 
         $html = str_get_html($content);
 
+        $path = array('src', 'data-original', 'original-src', 'pc-adapt');
+
         if($html->innertext!='' and count($html->find("link"))) {
 
             foreach ($html->find("link") as $a) {
@@ -548,50 +521,24 @@ class SiteController
                 }
             }
         }
+
         if($html->innertext!='' and count($html->find("img"))) {
-
-            foreach ($html->find("img") as $a) {
-                if(!empty($a->attr['src']) && !stristr($a->attr['src'], 'http')) {
-                    $href = $a->attr['src'];
-                    //echo "До: " . $href . "<br>";
-                    $a->attr['src'] = ltrim($href, "/");
-                    // echo "После: " . $a->attr['src'] . "<br>";
-                    $html->save();
-                }
-            }
-
-
-            foreach ($html->find("img") as $a) {
-                if(!empty($a->attr['data-original']) && !stristr($a->attr['data-original'], 'http')) {
-                    $href = $a->attr['data-original'];
-                    $a->attr['data-original'] = ltrim($href, "/");
-                    $html->save();
-                }
-            }
-
-            foreach ($html->find("img") as $a) {
-                if(!empty($a->attr['original-src']) && !stristr($a->attr['original-src'], 'http')) {
-                    $href = $a->attr['original-src'];
-                    $a->attr['original-src'] = ltrim($href, "/");
-                    $html->save();
-                }
-            }
-
-            foreach ($html->find("img") as $a) {
-                if(!empty($a->attr['pc-adapt']) && !stristr($a->attr['pc-adapt'], 'http')) {
-                    $href = $a->attr['pc-adapt'];
-                    $a->attr['pc-adapt'] = ltrim($href, "/");
-                    $html->save();
+            foreach ($path as $p){
+                foreach ($html->find("img") as $a) {
+                    if(!empty($a->attr[$p]) && !stristr($a->attr[$p], 'http')) {
+                        $href = $a->attr[$p];
+                        $a->attr[$p] = ltrim($href, "/");
+                        $html->save();
+                    }
                 }
             }
         }
+
         if($html->innertext!='' and count($html->find("script"))) {
             foreach ($html->find("script") as $a) {
                 if(!empty($a->attr['src']) && !stristr($a->attr['src'], 'http')){
                     $href = $a->attr['src'];
-                    //echo "До: " . $href . "<br>";
                     $a->attr['src'] = ltrim($href, "/");
-                    //echo "После: " . $a->attr['src'] . "<br>";
                     $html->save();
                 }
             }
