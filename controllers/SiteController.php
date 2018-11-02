@@ -1,4 +1,4 @@
-<?php
+Привте<?php
 
 class SiteController
 {
@@ -227,7 +227,6 @@ class SiteController
                                             }
                                         }
                                     }
-
                                 }
                             }
                         }
@@ -370,7 +369,6 @@ class SiteController
                     //echo "<br>" . "Иначе -------- " . $fullPath . "<br>";
                 }
 
-                echo $fullPath . "<br>";
                 if (!empty($pathToDir)) {
 
                     if (!file_exists($targetUrl . "/" . $fullPath)) {
@@ -543,6 +541,7 @@ class SiteController
                 }
             }
         }
+
 //        if($html->innertext!='' and count($html->find("div"))) {
 //            foreach ($html->find("div") as $a) {
 //                if (!empty($a->attr['style']) && !stristr($a->attr['style'], 'http')) {
